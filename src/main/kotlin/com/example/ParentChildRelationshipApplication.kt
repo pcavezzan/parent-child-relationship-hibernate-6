@@ -65,11 +65,11 @@ class Person {
 
     var name: String = ""
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = [CascadeType.REMOVE])
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     var parent: Person? = null
 
-    @OneToMany(mappedBy = "parent")
+    @OneToMany(mappedBy = "parent", cascade = [CascadeType.ALL], orphanRemoval = true)
     var children: MutableSet<Person> = mutableSetOf()
 
     override fun equals(other: Any?): Boolean {
