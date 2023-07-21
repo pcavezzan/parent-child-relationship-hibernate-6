@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  datasource:
+    url: jdbc:tc:postgresql:11.10:///registry
+    username: sa
+    password: password
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+
