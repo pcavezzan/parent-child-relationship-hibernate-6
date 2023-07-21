@@ -1,5 +1,7 @@
 package com.example
 
+import jakarta.annotation.PreDestroy
+import jakarta.persistence.*
 import org.hibernate.annotations.NaturalId
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -9,8 +11,6 @@ import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
-import javax.annotation.PreDestroy
-import javax.persistence.*
 
 
 @SpringBootApplication
